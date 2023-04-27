@@ -1,8 +1,8 @@
+import { headerBar_, logo_, logoText_, logoIcon_ } from "./style.header";
 import React from "react";
 import { Flex, Text, Box, Input } from "theme-ui";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
-import { headerBar_, logo_, logoText_, logoIcon_ } from "./style.header";
 
 const Header = () => {
   return (
