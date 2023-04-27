@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Text } from "theme-ui";
+import { Flex, Text, Box } from "theme-ui";
 
 const Header = () => {
   return (
@@ -13,7 +13,15 @@ const Header = () => {
         boxShadow: "0 0 5px 0 #ccc",
       }}
     >
-      <Text sx={{ color: "primary" }}>Header</Text>
+      <Text
+        sx={{
+          fontFamily: "'Stylish', sans-serif",
+          fontSize: "28px",
+          fontWeight: "500",
+        }}
+      >
+        BOOK GALLERY
+      </Text>
     </Flex>
   );
 };
