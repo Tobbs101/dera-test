@@ -31,3 +31,18 @@ export const logoText_ = {
 
 //LOGO ICON STYLING
 export const logoIcon_ = "text-secondary text-2xl";
+
+//SEARCH STYLING
+export const search_ = {
+  border: "1px solid #ccc",
+  outline: "none",
+  height: "30px",
+  transitionDuration: ".3s",
+  width: "250px",
+  fontSize: "10px",
+  paddingLeft: "10px",
+  "&:focus": { border: "1px solid #404caf", paddingLeft: "15px" },
+  "@media screen and (max-width: 768px)": {
+    width: "50%",
+  },
+};

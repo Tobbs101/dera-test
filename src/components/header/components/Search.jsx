@@ -1,24 +1,26 @@
 import React from "react";
 import { Input } from "theme-ui";
+import { useDebounce } from "../../../hooks/useDebounce";
+import { search_ } from "../style.header";
 
 const Search = ({ setSearchTerm }) => {
+  const debouncedSearch = useDebounce((searchTerm) => {
+    // Call your search function here
+    console.log(`Searching for "${searchTerm}"...`);
+  }, 1000);
+
+  const handleSearchChange = (event) => {
+    const newSearchTerm = event.target.value;
+    setSearchTerm(newSearchTerm);
+    debouncedSearch(newSearchTerm);
+  };
+
   return (
     <Input
       placeholder="Search by title or author..."
-      onChange={(e) => setSearchTerm(e.target.value)}
+      onChange={handleSearchChange}
       type="search"
-      sx={{
-        border: "1px solid #ccc",
-        outline: "none",
-        height: "30px",
-        transitionDuration: ".3s",
-        width: "250px",
-        paddingLeft: "10px",
-        "&:focus": { border: "1px solid #404caf", paddingLeft: "15px" },
-        "@media screen and (max-width: 768px)": {
-          width: "50%",
-        },
-      }}
+      sx={search_}
     />
   );
 };

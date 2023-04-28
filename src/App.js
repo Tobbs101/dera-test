@@ -1,15 +1,21 @@
 import { useState } from "react";
 import { BookContext } from "./context";
 import { Box } from "theme-ui";
-import Header from "./header/Header";
+import Header from "./components/header/Header";
 import { Routes, Route } from "react-router-dom";
-import Books from "./books/Books";
-import BookInfo from "./bookInfo/BookInfo";
+import Books from "./components/books/Books";
+import BookInfo from "./components/bookInfo/BookInfo";
 import { container } from "./App.styles";
+import bookData from "./books.json";
 
 function App() {
   //GLOBAL CONTEXT DATA
-  const [data, setData] = useState({ books: [], currentBook: {} });
+  const [data, setData] = useState({
+    books: [...bookData.books],
+    currentBook: {},
+  });
+
+  console.log({ data });
 
   return (
     <BookContext.Provider value={{ data, setData }}>
