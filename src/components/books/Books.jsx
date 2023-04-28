@@ -43,7 +43,9 @@ const Books = () => {
             });
           }}
         >
-          <Text sx={{ textAlign: "center" }}>{shortenTitle(book.title)}</Text>
+          <Text sx={{ textAlign: "center", width: "100%" }}>
+            {shortenTitle(book.title)}
+          </Text>
           <Box
             sx={{
               display: "flex",
