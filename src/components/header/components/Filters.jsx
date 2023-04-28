@@ -5,32 +5,14 @@ import { BookContext } from "../../../context";
 import { getDates } from "../utils";
 
 const Filters = () => {
-  const { data, setData } = useContext(BookContext);
+  const { data } = useContext(BookContext);
   const [uniqueDates, setUniqueDates] = useState([]);
 
   useEffect(() => {
     getDates(data, setUniqueDates);
-  }, []);
+  }, [data]);
 
-  // function getDates() {
-  //   console.log("hey");
-  //   if (data.books.length > 1) {
-  //     console.log("heyy");
-  //     const length = data.books.length;
-  //     console.log(length);
-  //     for (let i = 0; i < length; i++) {
-  //       const currentYear = data.books[i].year;
-  //       setUniqueDates((prev) => {
-  //         if (currentYear === "0") return prev;
-  //         if (prev.some((year) => year === currentYear)) return prev;
-  //         const updatedDates = [...prev, currentYear];
-  //         return updatedDates.sort((a, b) => a - b);
-  //       });
-  //     }
-  //   }
-  // }
-
-  console.log("d", data);
+  // console.log("d", data);
   return (
     <Select sx={filter_}>
       <option selected disabled>
