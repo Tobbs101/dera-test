@@ -13,6 +13,7 @@ function App() {
   const [data, setData] = useState({
     books: [...bookData.books],
     currentBook: {},
+    filters: { search: "", year: "" },
   });
 
   return (

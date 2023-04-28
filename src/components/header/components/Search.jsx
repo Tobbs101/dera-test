@@ -7,11 +7,11 @@ const Search = ({ setSearchTerm }) => {
   const debouncedSearch = useDebounce((searchTerm) => {
     // Call your search function here
     console.log(`Searching for "${searchTerm}"...`);
-  }, 1000);
+    setSearchTerm(searchTerm);
+  }, 500);
 
   const handleSearchChange = (event) => {
     const newSearchTerm = event.target.value;
-    setSearchTerm(newSearchTerm);
     debouncedSearch(newSearchTerm);
   };
 

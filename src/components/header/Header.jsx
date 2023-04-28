@@ -1,5 +1,6 @@
 import { headerBar_, logo_, logoText_, logoIcon_ } from "./style.header";
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import { BookContext } from "../../context";
 import { Flex, Text, Box } from "theme-ui";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
@@ -7,10 +8,21 @@ import Search from "./components/Search";
 import Filters from "./components/Filters";
 
 const Header = () => {
+  const { data, setData } = useContext(BookContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
-  
-  console.log({ selectedYear });
+
+  console.log({ data });
+
+  useEffect(() => {
+    setData((prev) => ({
+      ...prev,
+      filters: {
+        search: searchTerm,
+        year: selectedYear,
+      },
+    }));
+  }, [searchTerm, selectedYear]);
 
   return (
     <Flex sx={headerBar_}>
