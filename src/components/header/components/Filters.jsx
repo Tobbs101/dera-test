@@ -23,6 +23,7 @@ const Filters = ({ setSelectedYear }) => {
       <option selected disabled>
         Filter by Year
       </option>
+      <option value={""}>All</option>
       {uniqueDates.map((date, index) => (
         <option key={index} value={date}>
           {date}
