@@ -16,10 +16,21 @@ const Header = () => {
         <Text sx={logoText_}>BOOK GALLERY</Text>
         <FontAwesomeIcon icon={faBook} className={logoIcon_} />
       </Box>
-      <Flex sx={{ alignItems: "center" }}>
+      <Flex sx={{ alignItems: "center", gap: "5px" }}>
         <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-        <Select>
-          <option></option>
+        <Select
+          sx={{
+            width: "150px",
+            height: "30px",
+            fontSize: "10px",
+            "@media screen and (max-width: 300px)": {
+              width: "50%",
+            },
+          }}
+        >
+          <option>Filter by Year</option>
+          <option>Option 1</option>
+          <option>Option 2</option>
         </Select>
       </Flex>
     </Flex>
