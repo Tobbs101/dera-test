@@ -8,6 +8,10 @@ export const headerBar_ = {
   boxShadow: "0 0 5px 0 #ccc",
   justifyContent: "space-between",
   alignItems: "center",
+  flexDirection: "row", // default value
+  "@media screen and (max-width: 768px)": {
+    flexDirection: "column",
+  },
 };
 
 //LOGO STYLING
