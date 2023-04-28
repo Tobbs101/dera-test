@@ -9,7 +9,8 @@ import Filters from "./components/Filters";
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
-  console.log({ searchTerm });
+  
+  console.log({ selectedYear });
 
   return (
     <Flex sx={headerBar_}>
