@@ -8,11 +8,9 @@ import Search from "./components/Search";
 import Filters from "./components/Filters";
 
 const Header = () => {
-  const { data, setData } = useContext(BookContext);
+  const { setData } = useContext(BookContext);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
-
-  console.log({ data });
 
   useEffect(() => {
     setData((prev) => ({
