@@ -4,7 +4,7 @@ import { filter_ } from "../style.header";
 import { BookContext } from "../../../context";
 import { getDates } from "../utils";
 
-const Filters = () => {
+const Filters = ({ setSelectedYear }) => {
   const { data } = useContext(BookContext);
   const [uniqueDates, setUniqueDates] = useState([]);
 
@@ -14,12 +14,19 @@ const Filters = () => {
 
   // console.log("d", data);
   return (
-    <Select sx={filter_}>
+    <Select
+      sx={filter_}
+      onChange={(e) => {
+        setSelectedYear(e.target.value);
+      }}
+    >
       <option selected disabled>
         Filter by Year
       </option>
       {uniqueDates.map((date, index) => (
-        <option key={index}>{date}</option>
+        <option key={index} value={date}>
+          {date}
+        </option>
       ))}
     </Select>
   );

@@ -8,6 +8,8 @@ import Filters from "./components/Filters";
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedYear, setSelectedYear] = useState("");
+  console.log({ searchTerm });
 
   return (
     <Flex sx={headerBar_}>
@@ -17,7 +19,10 @@ const Header = () => {
       </Box>
       <Flex sx={{ alignItems: "center", gap: "5px" }}>
         <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-        <Filters />
+        <Filters
+          selectedYear={selectedYear}
+          setSelectedYear={setSelectedYear}
+        />
       </Flex>
     </Flex>
   );
