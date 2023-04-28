@@ -46,3 +46,16 @@ export const search_ = {
     width: "50%",
   },
 };
+
+export const filter_ = {
+  width: "150px",
+  height: "30px",
+  fontSize: "10px",
+  transitionDuration: ".3s",
+  outline: "none",
+  border: "1px solid #ccc",
+  "&:focus": { border: "1px solid #404caf" },
+  "@media screen and (max-width: 300px)": {
+    width: "50%",
+  },
+};

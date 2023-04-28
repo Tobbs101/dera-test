@@ -15,8 +15,6 @@ function App() {
     currentBook: {},
   });
 
-  console.log({ data });
-
   return (
     <BookContext.Provider value={{ data, setData }}>
       <Box sx={container}>
