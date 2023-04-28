@@ -3,16 +3,17 @@ import { BookContext } from "../../context";
 import { Grid, Box, Card, Text, Button } from "theme-ui";
 
 const Books = () => {
-  const { data } = useContext(BookContext);
+  const { data, setData } = useContext(BookContext);
 
-  const filteredData = data.books.filter(
-    (book) =>
-      book.title === data.filters.search ||
-      book.author === data.filters.search ||
-      book.year === data.filters.year
-  );
+  console.log({ data });
 
-  console.log({ filteredData });
+  function shortenTitle(title) {
+    const colonIndex = title.indexOf(":");
+    if (colonIndex !== -1) {
+      return title.substring(0, colonIndex);
+    }
+    return title;
+  }
 
   return (
     <Grid
@@ -30,14 +31,19 @@ const Books = () => {
             boxShadow: "0 0 5px 0 #ccc",
             backgroundColor: "#fff",
             cursor: "pointer",
-            minHeight: "180px",
+            minHeight: "200px",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
           }}
           key={index}
+          onClick={() => {
+            setData((prev) => {
+              return { ...prev, currentBook: book };
+            });
+          }}
         >
-          <Text>{book.title}</Text>
+          <Text sx={{ textAlign: "center" }}>{shortenTitle(book.title)}</Text>
           <Box
             sx={{
               display: "flex",
@@ -46,7 +52,7 @@ const Books = () => {
               gap: "3px",
             }}
           >
-            <Text>{book.author}</Text>
+            <Text style={{ fontStyle: "italic" }}>{book.author}</Text>
             <Button>VIEW BOOK</Button>
           </Box>
         </Card>
