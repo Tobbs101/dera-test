@@ -9,7 +9,25 @@ const Books = () => {
   const { data, setData } = useContext(BookContext);
   const navigate = useNavigate();
 
+  // eslint-disable-next-line array-callback-return
+  const formattedData = data?.books
+    .map((x) => {
+      if (data.filters.search === "" || data.filters.year === "") {
+        return x;
+      } else if (
+        x.title === data.filters.search ||
+        x.author === data.filters.search ||
+        x.year === data.filters.year
+      ) {
+        return x;
+      } else {
+        return null;
+      }
+    })
+    .filter((x) => x !== null);
+
   console.log({ data });
+  console.log({ formattedData });
 
   function shortenTitle(title) {
     const colonIndex = title.indexOf(":");
