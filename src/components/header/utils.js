@@ -13,3 +13,11 @@ export function getDates(data, setUniqueDates) {
     }
   }
 }
+
+export function shortenTitle(title) {
+  const colonIndex = title.indexOf(":");
+  if (colonIndex !== -1) {
+    return title.substring(0, colonIndex);
+  }
+  return title;
+}
