@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { container_, gridStyle_, title_ } from "./bookinfo.style";
 
 const BookInfo = () => {
   const navigate = useNavigate();
@@ -24,22 +25,8 @@ const BookInfo = () => {
       >
         <FontAwesomeIcon icon={faArrowLeftLong} />
       </Button>
-      <Box
-        sx={{
-          border: "1px solid #ccc",
-          backgroundColor: "#fff",
-          boxShadow: "0 0 5px 0 #ccc",
-          padding: "10px",
-          borderRadius: "5px",
-        }}
-      >
-        <Box
-          sx={{
-            marginBottom: "15px",
-            borderBottom: "1px solid #ccc",
-            paddingBottom: "5px",
-          }}
-        >
+      <Box sx={container_}>
+        <Box sx={title_}>
           <Text
             sx={{
               fontWeight: "600",
@@ -50,18 +37,7 @@ const BookInfo = () => {
           </Text>
         </Box>
 
-        <Grid
-          sx={{
-            gridTemplateColumns: "repeat(4,1fr)",
-            gap: "25px",
-            "@media screen and (max-width:1000px)": {
-              gridTemplateColumns: "repeat(2,1fr)",
-            },
-            "@media screen and (max-width:500px)": {
-              gridTemplateColumns: "repeat(1,1fr)",
-            },
-          }}
-        >
+        <Grid sx={gridStyle_}>
           <Text>Author(s): {currentBook?.author}</Text>
           <Text>
             Description:{" "}
