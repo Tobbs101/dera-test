@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import { BookContext } from "../../context";
 import { Grid, Box, Card, Text, Button } from "theme-ui";
+import { useNavigate } from "react-router-dom";
 
 const Books = () => {
   const { data, setData } = useContext(BookContext);
+  const navigate = useNavigate();
 
   console.log({ data });
 
@@ -20,6 +22,13 @@ const Books = () => {
       sx={{
         marginTop: "20px",
         gridTemplateColumns: "repeat(4,1fr)",
+        gap: "30px",
+        "@media screen and (max-width:1000px)": {
+          gridTemplateColumns: "repeat(2,1fr)",
+        },
+        "@media screen and (max-width:500px)": {
+          gridTemplateColumns: "repeat(1,1fr)",
+        },
       }}
     >
       {data?.books?.map((book, index) => (
@@ -30,7 +39,6 @@ const Books = () => {
             borderRadius: "5px",
             boxShadow: "0 0 5px 0 #ccc",
             backgroundColor: "#fff",
-            cursor: "pointer",
             minHeight: "200px",
             display: "flex",
             flexDirection: "column",
@@ -43,8 +51,19 @@ const Books = () => {
             });
           }}
         >
-          <Text sx={{ textAlign: "center", width: "100%" }}>
-            {shortenTitle(book.title)}
+          <Text
+            sx={{
+              textAlign: "center",
+              width: "100%",
+              border: "1px solid #ccc",
+              boxShadow: "0 0 5px 0 #ccc inset",
+              padding: "3px 0",
+              borderRadius: "5px",
+              fontWeight: "500",
+            }}
+            className="bg-slate-50 text-slate-500"
+          >
+            {shortenTitle(book.title).toUpperCase()}
           </Text>
           <Box
             sx={{
@@ -54,7 +73,7 @@ const Books = () => {
               gap: "3px",
             }}
           >
-            <Text style={{ fontStyle: "italic" }}>{book.author}</Text>
+            <Text style={{ fontStyle: "italic" }}>- {book.author}</Text>
             <Button>VIEW BOOK</Button>
           </Box>
         </Card>
