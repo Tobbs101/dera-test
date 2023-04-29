@@ -5,7 +5,7 @@ import Header from "./components/header/Header";
 import { Routes, Route } from "react-router-dom";
 import Books from "./components/books/Books";
 import BookInfo from "./components/bookInfo/BookInfo";
-import { container } from "./App.styles";
+import { container, innerContainer_ } from "./App.styles";
 import bookData from "./books.json";
 import { Toaster } from "react-hot-toast";
 
@@ -21,11 +21,13 @@ function App() {
     <>
       <BookContext.Provider value={{ data, setData }}>
         <Box sx={container}>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Books />} />
-            <Route path="/:id" element={<BookInfo />} />
-          </Routes>
+          <Box sx={innerContainer_}>
+            <Header />
+            <Routes>
+              <Route path="/" element={<Books />} />
+              <Route path="/:id" element={<BookInfo />} />
+            </Routes>
+          </Box>
         </Box>
       </BookContext.Provider>
       <Toaster />

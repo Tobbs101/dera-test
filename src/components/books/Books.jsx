@@ -31,7 +31,7 @@ const Books = () => {
       sx={{
         marginTop: "20px",
         gridTemplateColumns: "repeat(4,1fr)",
-        gap: "30px",
+        gap: "25px",
         "@media screen and (max-width:1000px)": {
           gridTemplateColumns: "repeat(2,1fr)",
         },
