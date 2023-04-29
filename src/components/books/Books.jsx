@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { BookContext } from "../../context";
-import { Grid, Box, Card, Text, Button } from "theme-ui";
+import { Grid, Box, Card, Text, Flex, Button } from "theme-ui";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import Pagination from "../pagination/Pagination";
 import { bookGrid_, book_, title_, cardFooter_ } from "./style.book";
 import { shortenTitle } from "../header/utils";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const Books = () => {
   const { data, setData } = useContext(BookContext);
@@ -50,7 +52,12 @@ const Books = () => {
   };
 
   if (formattedData.length < 1) {
-    return <Text>No data</Text>;
+    return (
+      <Flex sx={{ alignItems: "center", justifyContent: "center", gap: "5px" }}>
+        <FontAwesomeIcon icon={faCircleExclamation} />
+        <Text>No data</Text>
+      </Flex>
+    );
   }
 
   return (
