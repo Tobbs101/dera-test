@@ -64,51 +64,112 @@ const Books = () => {
 
   return (
     <>
-      <Grid sx={bookGrid_}>
-        {!isPaginated
-          ? formattedData?.map((book, index) => (
-              <Card
-                sx={book_}
-                onMouseEnter={() => {
-                  setData((prev) => {
-                    return { ...prev, currentBook: book };
-                  });
-                }}
-                key={index}
-              >
-                <Text sx={title_} className="bg-slate-50 text-slate-500">
-                  {shortenTitle(book.title).toUpperCase()}
-                </Text>
-                <Box sx={cardFooter_}>
-                  <Text style={{ fontStyle: "italic" }}>- {book.author}</Text>
-                  <Button
-                    onClick={() => {
-                      navigateToBooks();
-                    }}
-                  >
-                    VIEW BOOK
-                  </Button>
-                </Box>
-              </Card>
-            ))
-          : paginatedData[currentPage - 1].map((book, index) => (
-              <Card sx={book_} key={index}>
-                <Text sx={title_} className="bg-slate-50 text-slate-500">
-                  {shortenTitle(book.title).toUpperCase()}
-                </Text>
-                <Box sx={cardFooter_}>
-                  <Text style={{ fontStyle: "italic" }}>- {book.author}</Text>
-                  <Button
-                    onClick={() => {
-                      navigateToBooks(book);
-                    }}
-                  >
-                    VIEW BOOK
-                  </Button>
-                </Box>
-              </Card>
-            ))}
-      </Grid>
+      <Box
+        sx={{
+          marginTop: "10px",
+          display: "flex",
+          width: "100%",
+          overflowX: "scroll",
+        }}
+      >
+        <table>
+          <thead>
+            <tr
+              style={{
+                border: "1px solid #ccc",
+                boxShadow: "0 0 5px 0 #ccc inset",
+              }}
+            >
+              <th style={{ minWidth: "300px", padding: "5px 0" }}>TITLE</th>
+              <th style={{ minWidth: "200px" }}>AUTHOR</th>
+              <th style={{ minWidth: "150px" }}>YEAR</th>
+              <th style={{ minWidth: "300px" }}>CATEGORIES</th>
+              <th style={{ minWidth: "150px" }}>ACTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            {!isPaginated
+              ? formattedData?.map((book, index) => (
+                  <tr key={index}>
+                    <td style={{ minWidth: "300px" }}>
+                      <Text>{book.title}</Text>
+                    </td>
+                    <td style={{ minWidth: "200px" }}>
+                      <Text>{book.author}</Text>
+                    </td>
+                    <td
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        minWidth: "150px",
+                      }}
+                    >
+                      <Text>{book.year}</Text>
+                    </td>
+                    <td style={{ minWidth: "300px" }}>
+                      <Text>{book.categories}</Text>
+                    </td>
+                    <td
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        minWidth: "150px",
+                      }}
+                    >
+                      <Button
+                        onClick={() => {
+                          navigateToBooks(book);
+                        }}
+                      >
+                        VIEW BOOK
+                      </Button>
+                    </td>
+                  </tr>
+                ))
+              : paginatedData[currentPage - 1].map((book, index) => (
+                  <tr key={index}>
+                    <td style={{ minWidth: "300px", padding: "5px 0" }}>
+                      <Text>{book.title}</Text>
+                    </td>
+                    <td style={{ minWidth: "150px" }}>
+                      <Text>{book.author}</Text>
+                    </td>
+                    <td
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        minWidth: "150px",
+                      }}
+                    >
+                      <Text>{book.year}</Text>
+                    </td>
+                    <td style={{ minWidth: "300px" }}>
+                      <Text>{book.categories}</Text>
+                    </td>
+                    <td
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        minWidth: "150px",
+                      }}
+                    >
+                      <Button
+                        onClick={() => {
+                          navigateToBooks(book);
+                        }}
+                      >
+                        VIEW
+                      </Button>
+                    </td>
+                  </tr>
+                ))}
+          </tbody>
+        </table>
+      </Box>
       <Pagination
         length={paginatedData.length}
         currentPage={currentPage}
