@@ -39,7 +39,8 @@ const Books = () => {
     }
   }, [formattedData]);
 
-  const navigateToBooks = () => {
+  const navigateToBooks = (book) => {
+    sessionStorage.setItem("currentBook", JSON.stringify(book));
     toast.loading("Loading...");
     setTimeout(() => {
       toast.remove();
@@ -90,15 +91,7 @@ const Books = () => {
               </Card>
             ))
           : paginatedData[currentPage - 1].map((book, index) => (
-              <Card
-                sx={book_}
-                onMouseEnter={() => {
-                  setData((prev) => {
-                    return { ...prev, currentBook: book };
-                  });
-                }}
-                key={index}
-              >
+              <Card sx={book_} key={index}>
                 <Text sx={title_} className="bg-slate-50 text-slate-500">
                   {shortenTitle(book.title).toUpperCase()}
                 </Text>
@@ -106,7 +99,7 @@ const Books = () => {
                   <Text style={{ fontStyle: "italic" }}>- {book.author}</Text>
                   <Button
                     onClick={() => {
-                      navigateToBooks();
+                      navigateToBooks(book);
                     }}
                   >
                     VIEW BOOK
