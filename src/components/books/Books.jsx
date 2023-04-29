@@ -1,16 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 import { BookContext } from "../../context";
-import { Grid, Box, Card, Text, Flex, Button } from "theme-ui";
+import { Box, Text, Flex, Button } from "theme-ui";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import Pagination from "../pagination/Pagination";
-import { bookGrid_, book_, title_, cardFooter_, ifEmpty_ } from "./style.book";
-import { shortenTitle } from "../header/utils";
+import { ifEmpty_ } from "./style.book";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const Books = () => {
-  const { data, setData } = useContext(BookContext);
+  const { data } = useContext(BookContext);
   const [paginatedData, setPaginatedData] = useState([]);
   const [isPaginated, setIsPaginated] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
