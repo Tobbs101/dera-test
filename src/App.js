@@ -7,6 +7,7 @@ import Books from "./components/books/Books";
 import BookInfo from "./components/bookInfo/BookInfo";
 import { container } from "./App.styles";
 import bookData from "./books.json";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   //GLOBAL CONTEXT DATA
@@ -17,15 +18,18 @@ function App() {
   });
 
   return (
-    <BookContext.Provider value={{ data, setData }}>
-      <Box sx={container}>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Books />} />
-          <Route path="/:id" element={<BookInfo />} />
-        </Routes>
-      </Box>
-    </BookContext.Provider>
+    <>
+      <BookContext.Provider value={{ data, setData }}>
+        <Box sx={container}>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Books />} />
+            <Route path="/:id" element={<BookInfo />} />
+          </Routes>
+        </Box>
+      </BookContext.Provider>
+      <Toaster />
+    </>
   );
 }
 

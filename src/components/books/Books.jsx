@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { BookContext } from "../../context";
 import { Grid, Box, Card, Text, Button } from "theme-ui";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const Books = () => {
   const { data, setData } = useContext(BookContext);
@@ -16,6 +17,14 @@ const Books = () => {
     }
     return title;
   }
+
+  const navigateToBooks = () => {
+    toast.loading("Loading...");
+    setTimeout(() => {
+      toast.remove();
+      navigate(`/${data.currentBook.id}`);
+    }, 1000);
+  };
 
   return (
     <Grid
@@ -44,12 +53,12 @@ const Books = () => {
             flexDirection: "column",
             justifyContent: "space-between",
           }}
-          key={index}
-          onClick={() => {
+          onMouseEnter={() => {
             setData((prev) => {
               return { ...prev, currentBook: book };
             });
           }}
+          key={index}
         >
           <Text
             sx={{
@@ -74,7 +83,13 @@ const Books = () => {
             }}
           >
             <Text style={{ fontStyle: "italic" }}>- {book.author}</Text>
-            <Button>VIEW BOOK</Button>
+            <Button
+              onClick={() => {
+                navigateToBooks();
+              }}
+            >
+              VIEW BOOK
+            </Button>
           </Box>
         </Card>
       ))}

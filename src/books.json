@@ -308,7 +308,7 @@
     },
     {
       "id": "826704",
-      "title": "Agile.Web.Development.with.Rails.4th.Edition",
+      "title": "Agile Web Development with Rails",
       "author": "the pragmatic programmers",
       "author_firstname": null,
       "author_lastname": "",
@@ -1159,36 +1159,6 @@
       "cover": "http://libgen.org/covers/228000/25843874a016719643cf94d47a2e6ba9-d.jpg"
     },
     {
-      "id": "682357",
-      "title": "Even Faster Web Sites: Performance Best Practices for Web Developers",
-      "author": "Steve Souders",
-      "author_firstname": null,
-      "author_lastname": "",
-      "author_middlename": "",
-      "categories": "",
-      "volume": "",
-      "year": "2009",
-      "edition": "1",
-      "language": "en",
-      "extension": "pdf",
-      "pages": "256",
-      "filesize": "3610929",
-      "md5": "2209885316F24F95F082DC38FE7F8154",
-      "series": "",
-      "periodical": "",
-      "file_extension": "pdf",
-      "url": "http://bookzz.org/dl/682357/ca2b32",
-      "convertTo": {
-        "epub": "http://bookzz.org/cs2/liveconverter/?source=http%3A%2F%2Fdlx.bookzz.org%2Fgenesis%2F254000%2F2209885316f24f95f082dc38fe7f8154&input_format=pdf&output_format=EPUB&download=1",
-        "fb2": "http://bookzz.org/cs2/liveconverter/?source=http%3A%2F%2Fdlx.bookzz.org%2Fgenesis%2F254000%2F2209885316f24f95f082dc38fe7f8154&input_format=pdf&output_format=FB2&download=1",
-        "mobi": "http://bookzz.org/cs2/liveconverter/?source=http%3A%2F%2Fdlx.bookzz.org%2Fgenesis%2F254000%2F2209885316f24f95f082dc38fe7f8154&input_format=pdf&output_format=MOBI&download=1",
-        "txt": "http://bookzz.org/cs2/liveconverter/?source=http%3A%2F%2Fdlx.bookzz.org%2Fgenesis%2F254000%2F2209885316f24f95f082dc38fe7f8154&input_format=pdf&output_format=TXT&download=1",
-        "rtf": "http://bookzz.org/cs2/liveconverter/?source=http%3A%2F%2Fdlx.bookzz.org%2Fgenesis%2F254000%2F2209885316f24f95f082dc38fe7f8154&input_format=pdf&output_format=RTF&download=1"
-      },
-      "description": "Steve Souders has been a leader in documenting and evangelizing techniques for improving web site performance, and his previous book High Performance Web Sites: Essential Knowledge for Front-End Engineers (or the web posting from which it evolved) is essential reading. Even Faster Web Sites is not an updating of that book, but a collection of additional advice from Souders and eight contributors. So the first thing to note is that you should probably only tackle this book if you've already mastered the techniques outlined in High Performance Web Sites.\r\rThe one exception to the advice above may be if you're a web developer who makes heavy use of Javascript, since over half of this book is devoted to AJAX. The remainder of the book addresses a variety of topics of interest to web development professionals in general--optimizing images, writing efficient CSS, advanced techniques for implementing gzipping, and more.\r\rAs with Souders previous book, there is little that will be new to professionals who've kept up with best practices via blogs and the like, but it's still nice to have all the information in one handy book. For those who are just starting to investigate web performance optimization, High Performance Web Sites plus Even Faster Web Sites will get you up to speed quickly.",
-      "cover": "http://libgen.org/covers/254000/2209885316f24f95f082dc38fe7f8154-d.jpg"
-    },
-    {
       "id": "682381",
       "title": "Spring Web Flow 2 Web Development",
       "author": "Sven Lüppken, Markus Stäuble",
@@ -1277,36 +1247,6 @@
       },
       "description": "Steve Souders has been a leader in documenting and evangelizing techniques for improving web site performance, and his previous book High Performance Web Sites: Essential Knowledge for Front-End Engineers (or the web posting from which it evolved) is essential reading. Even Faster Web Sites is not an updating of that book, but a collection of additional advice from Souders and eight contributors. So the first thing to note is that you should probably only tackle this book if you've already mastered the techniques outlined in High Performance Web Sites.\r\rThe one exception to the advice above may be if you're a web developer who makes heavy use of Javascript, since over half of this book is devoted to AJAX. The remainder of the book addresses a variety of topics of interest to web development professionals in general--optimizing images, writing efficient CSS, advanced techniques for implementing gzipping, and more.\r\rAs with Souders previous book, there is little that will be new to professionals who've kept up with best practices via blogs and the like, but it's still nice to have all the information in one handy book. For those who are just starting to investigate web performance optimization, High Performance Web Sites plus Even Faster Web Sites will get you up to speed quickly.",
       "cover": "http://libgen.org/covers/312000/b649272bed7a50044e66dd0ec236156e-d.jpg"
-    },
-    {
-      "id": "739106",
-      "title": "Even Faster Web Sites: Performance Best Practices for Web Developers",
-      "author": "Steve Souders",
-      "author_firstname": null,
-      "author_lastname": "",
-      "author_middlename": "",
-      "categories": "",
-      "volume": "",
-      "year": "2009",
-      "edition": "1",
-      "language": "en",
-      "extension": "pdf",
-      "pages": "256",
-      "filesize": "3721133",
-      "md5": "E917EDEDF6C573DD6B4FD11B17834657",
-      "series": "",
-      "periodical": "",
-      "file_extension": "pdf",
-      "url": "http://bookzz.org/dl/739106/226385",
-      "convertTo": {
-        "epub": "http://bookzz.org/cs2/liveconverter/?source=http%3A%2F%2Fdlx.bookzz.org%2Fgenesis%2F313000%2Fe917ededf6c573dd6b4fd11b17834657&input_format=pdf&output_format=EPUB&download=1",
-        "fb2": "http://bookzz.org/cs2/liveconverter/?source=http%3A%2F%2Fdlx.bookzz.org%2Fgenesis%2F313000%2Fe917ededf6c573dd6b4fd11b17834657&input_format=pdf&output_format=FB2&download=1",
-        "mobi": "http://bookzz.org/cs2/liveconverter/?source=http%3A%2F%2Fdlx.bookzz.org%2Fgenesis%2F313000%2Fe917ededf6c573dd6b4fd11b17834657&input_format=pdf&output_format=MOBI&download=1",
-        "txt": "http://bookzz.org/cs2/liveconverter/?source=http%3A%2F%2Fdlx.bookzz.org%2Fgenesis%2F313000%2Fe917ededf6c573dd6b4fd11b17834657&input_format=pdf&output_format=TXT&download=1",
-        "rtf": "http://bookzz.org/cs2/liveconverter/?source=http%3A%2F%2Fdlx.bookzz.org%2Fgenesis%2F313000%2Fe917ededf6c573dd6b4fd11b17834657&input_format=pdf&output_format=RTF&download=1"
-      },
-      "description": "Steve Souders has been a leader in documenting and evangelizing techniques for improving web site performance, and his previous book High Performance Web Sites: Essential Knowledge for Front-End Engineers (or the web posting from which it evolved) is essential reading. Even Faster Web Sites is not an updating of that book, but a collection of additional advice from Souders and eight contributors. So the first thing to note is that you should probably only tackle this book if you've already mastered the techniques outlined in High Performance Web Sites.\r\rThe one exception to the advice above may be if you're a web developer who makes heavy use of Javascript, since over half of this book is devoted to AJAX. The remainder of the book addresses a variety of topics of interest to web development professionals in general--optimizing images, writing efficient CSS, advanced techniques for implementing gzipping, and more.\r\rAs with Souders previous book, there is little that will be new to professionals who've kept up with best practices via blogs and the like, but it's still nice to have all the information in one handy book. For those who are just starting to investigate web performance optimization, High Performance Web Sites plus Even Faster Web Sites will get you up to speed quickly.",
-      "cover": "http://libgen.org/covers/313000/e917ededf6c573dd6b4fd11b17834657-d.jpg"
     },
     {
       "id": "843714",
