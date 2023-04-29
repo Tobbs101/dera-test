@@ -3,6 +3,7 @@ import { BookContext } from "../../context";
 import { Grid, Box, Card, Text, Button } from "theme-ui";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import Pagination from "../pagination/Pagination";
 
 const Books = () => {
   const { data, setData } = useContext(BookContext);
@@ -93,6 +94,7 @@ const Books = () => {
           </Box>
         </Card>
       ))}
+      <Pagination />
     </Grid>
   );
 };
