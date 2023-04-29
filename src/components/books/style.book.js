@@ -38,3 +38,10 @@ export const cardFooter_ = {
   justifyContent: "center",
   gap: "3px",
 };
+
+export const ifEmpty_ = {
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "5px",
+  marginTop: "20px",
+};

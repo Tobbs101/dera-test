@@ -4,7 +4,7 @@ import { Grid, Box, Card, Text, Flex, Button } from "theme-ui";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import Pagination from "../pagination/Pagination";
-import { bookGrid_, book_, title_, cardFooter_ } from "./style.book";
+import { bookGrid_, book_, title_, cardFooter_, ifEmpty_ } from "./style.book";
 import { shortenTitle } from "../header/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
@@ -39,10 +39,6 @@ const Books = () => {
     }
   }, [formattedData]);
 
-  // console.log({ data });
-  console.log({ formattedData });
-  console.log({ isPaginated });
-
   const navigateToBooks = () => {
     toast.loading("Loading...");
     setTimeout(() => {
@@ -53,8 +49,12 @@ const Books = () => {
 
   if (formattedData.length < 1) {
     return (
-      <Flex sx={{ alignItems: "center", justifyContent: "center", gap: "5px" }}>
-        <FontAwesomeIcon icon={faCircleExclamation} />
+      <Flex sx={ifEmpty_}>
+        <FontAwesomeIcon
+          icon={faCircleExclamation}
+          style={{ fontSize: "20px" }}
+          className="text-secondary"
+        />
         <Text>No data</Text>
       </Flex>
     );

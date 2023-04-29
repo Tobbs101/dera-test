@@ -11,8 +11,6 @@ const Filters = ({ setSelectedYear }) => {
   useEffect(() => {
     getDates(data, setUniqueDates);
   }, [data]);
-
-  // console.log("d", data);
   return (
     <Select
       sx={filter_}
