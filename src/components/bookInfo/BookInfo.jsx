@@ -13,7 +13,6 @@ const BookInfo = () => {
   useEffect(() => {
     const book = JSON.parse(sessionStorage.getItem("currentBook"));
     setCurrentBook(book);
-    console.log(currentBook);
   }, []);
   return (
     <>

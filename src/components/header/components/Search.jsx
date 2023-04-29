@@ -5,8 +5,6 @@ import { search_ } from "../style.header";
 
 const Search = ({ setSearchTerm }) => {
   const debouncedSearch = useDebounce((searchTerm) => {
-    // Call your search function here
-    console.log(`Searching for "${searchTerm}"...`);
     setSearchTerm(searchTerm);
   }, 500);
 
