@@ -44,7 +44,8 @@ const Books = () => {
     toast.loading("Loading...");
     setTimeout(() => {
       toast.remove();
-      navigate(`/${data.currentBook.id}`);
+      const currentBook = JSON.parse(sessionStorage.getItem("currentBook"));
+      navigate(`/${currentBook.id}`);
     }, 1000);
   };
 

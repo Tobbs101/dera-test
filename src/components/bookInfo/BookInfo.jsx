@@ -38,16 +38,28 @@ const BookInfo = () => {
         </Box>
 
         <Grid sx={gridStyle_}>
-          <Text>Author(s): {currentBook?.author}</Text>
           <Text>
-            Description:{" "}
+            <b>Author(s):</b> {currentBook?.author}
+          </Text>
+          <Text>
+            <b>Description: </b>
             {currentBook?.description ? currentBook?.description : "-"}
           </Text>
-          <Text>Edition: {currentBook?.edition}</Text>
-          <Text>Language: {currentBook?.language}</Text>
-          <Text>Pages: {currentBook?.pages}</Text>
-          <Text>Link: {currentBook?.url}</Text>
-          <Text>Year: {currentBook?.year}</Text>
+          <Text>
+            <b>Edition:</b> {currentBook?.edition}
+          </Text>
+          <Text>
+            <b>Language:</b> {currentBook?.language}
+          </Text>
+          <Text>
+            <b>Pages:</b> {currentBook?.pages}
+          </Text>
+          <Text>
+            <b>Link:</b> {currentBook?.url}
+          </Text>
+          <Text>
+            <b>Year:</b> {currentBook?.year}
+          </Text>
         </Grid>
       </Box>
     </>
